@@ -1,0 +1,23 @@
+machine:
+  ruby:
+    version: 2.3.0
+  timezone:
+    Asia/Tokyo
+dependencies:
+  bundler:
+    without: [production]
+  cache_directories:
+    - public/assets
+    - tmp/cache/assets
+database:
+  override:
+    - bundle exec rake db:create db:migrate
+test:
+  pre:
+    - bundle exec rubocop
+    - bundle exec brakeman -4 -A -w 1 -e -z
+  override:
+    - bundle exec rspec --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec.xml --format progress:
+        parallel: true
+        files:
+          - spec/**/*_spec.rb

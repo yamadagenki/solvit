@@ -14,7 +14,7 @@ module Solvit
       g.helper false
       g.template_engine false
       g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: true
-      g.fixture_replacement :factory_girl, dir: "spec/factories"
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
 
     # Do not swallow errors in after_commit/after_rollback callbacks.

@@ -35,8 +35,6 @@ group :test do
   gem 'database_cleaner', '~> 1.4.1'
   gem 'poltergeist'
   gem 'rspec-rails'
-  gem 'rspec-cells'
-  gem 'rspec-retry'
   gem 'rspec_junit_formatter', '0.2.2'
   gem 'simplecov', require: false
   gem 'timecop'

@@ -1,0 +1,29 @@
+Metrics/LineLength:
+  Max: 120
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+AsciiComments:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - vendor/**/*
+    - log/**/*
+    - public/**/*
+    - tmp/**/*
+    - assets/**/*
+    - config/**/*
+    - coverage/**/*
